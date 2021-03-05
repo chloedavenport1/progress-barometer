@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    color: #ff5c5c;
+}
+p {
+    color: #999999;
+}
+.col-md-3 {
+    display: flex;
+    flex-wrap: wrap;
+}
+#circleBar {
+    margin-top: 50px;
+    text-align: center;
+}
+#circleBar .round {
+    margin-bottom: 20px;
+    margin-top: 30px;
+    min-height: 255px;
+    position: relative;
+}
+#circleBar .round strong {
+    color: #212121;
+    font-size: 40px;
+    font-weight: 600;
+    left: 50%;
+    margin-top: -22%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+}
+#circleBar span {
+    color: #999999;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    margin-top: 10px;
+}
+.fa::before {
+    color: #ff5c5c;
+    font-size: 22px;
+    margin-right: 7px;
+}
+section button.btn {
+    background-color: #ffe5e5;
+    border: none;
+}
+section button:hover {
+    background-color: #ff5c5c;
+}
+section button.btn:focus {
+    box-shadow: none;
+}

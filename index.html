@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Barometer</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        <section id="circleBar">
+            <h1>Retail Capital Task 1.3 - Barometer</h1>
+            <p>
+                A quick animated circular barometer using HTML, CSS and jQuery showcasing the percentages that I feel my web development skills are. To view the animation again, please press the Refresh button below.
+            </p>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <div class="round" data-value="0.74" data-size="200" data-thickness="12">
+                            <strong></strong>
+                            <span><i class="fa fa-html5">
+                                HTML SKILLS
+                            </i></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="round" data-value="0.78" data-size="200" data-thickness="12">
+                            <strong></strong>
+                            <span><i class="fa fa-css3">
+                                CSS SKILLS
+                            </i></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="round" data-value="0.64" data-size="200" data-thickness="12">
+                            <strong></strong>
+                            <span><i class="fa fa-jsfiddle">
+                                JAVASCRIPT SKILLS
+                            </i></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="round" data-value="0.80" data-size="200" data-thickness="12">
+                            <strong></strong>
+                            <span><i class="fa fa-laptop">
+                                GOOGLE SKILLS
+                            </i></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        <button class="btn" onClick="Circlle('.round')">Refresh</button>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js"></script>
+        <script>
+            function Circlle(el){
+                $(el).circleProgress({fill: {color: '#ff5c5c'}})
+                .on('circle-animation-progress', function(event, progress, stepValue){
+                    $(this).find('strong').text(String(stepValue.toFixed(2))+'%');
+                });
+            };
+
+            Circlle('.round');
+        </script>
+    </body>
+</html>
